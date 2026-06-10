@@ -1,0 +1,6 @@
+{
+  "name": "ゲージタイミングバトル",
+  "description": "タイミング良くゲージを止めて戦うリズムアクションバトルゲーム。コンボ、スキル、パリィを駆使して強敵を撃破しよう！",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
