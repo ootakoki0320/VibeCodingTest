@@ -136,6 +136,7 @@ export default function App() {
     setGameState('battle');
 
     sounds.playExplosion();
+    sounds.playBGM();
     addLog(`🔮 ステージ${nextStageIndex + 1}突入。エネミー：${template.name}`, 'system');
   };
 
@@ -187,6 +188,7 @@ export default function App() {
 
     if (nextPlayerHp <= 0) {
       setGameState('gameover');
+      sounds.stopBGM();
       sounds.playGameOver();
       addLog("❌ 戦闘不能... システム再構築を要します。", "system");
     }
@@ -206,6 +208,7 @@ export default function App() {
 
       if (nextHp <= 0) {
         setGameState('gameover');
+        sounds.stopBGM();
         sounds.playGameOver();
       }
       return;
@@ -267,9 +270,11 @@ export default function App() {
       
       if (player.stage === ENEMIES.length - 1) {
         setGameState('victory');
+        sounds.stopBGM();
         sounds.playPerfectHit();
       } else {
         setGameState('shop');
+        sounds.stopBGM();
         sounds.playHeal();
       }
     }

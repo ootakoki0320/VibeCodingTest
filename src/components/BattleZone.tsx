@@ -417,7 +417,7 @@ export default function BattleZone({
               </span>
               {enemy.isStunned && (
                 <span className="px-1 bg-amber-500 text-slate-950 text-[8px] font-bold rounded animate-bounce">
-                  STUNGED
+                  STUNNED
                 </span>
               )}
             </div>
